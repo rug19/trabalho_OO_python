@@ -11,6 +11,11 @@ def main():
   c2 = ContaEspecial("Ruan", 300, 1000)
   
   cliente1.adicionar_conta(c1)
+  cliente1.adicionar_conta(c2)
   cliente1.listar_contas()
-    
+  
+  c1.depositar(200)
+  c1.sacar(150)
+  
+  c1.exibir_extrato()
 main()

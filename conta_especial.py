@@ -7,9 +7,9 @@ class ContaEspecial(Conta):
         super().__init__(titular, saldo)
         self.__limite = limite
         
-    def mostrar_saldo(self):
+    def __str__(self):
         saldo_limite = self.saldo + self.__limite
-        print(f"Saldo atual de {self.titular}: R${self.saldo}\n Saldo + Limite R${saldo_limite}")
+        return f"Saldo atual de {self.titular}: R${self.saldo}\n Saldo + Limite R${saldo_limite}"
         
     def sacar(self, valor):
         try:
